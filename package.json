@@ -7,7 +7,7 @@
     "clear-require": "3.0.0",
     "easy-ethereum-client": "0.0.25",
     "ethereumjs-tx": "1.3.7",
-    "lodash": "4.17.11",
+    "lodash": "4.17.15",
     "moment": "2.24.0",
     "rabbot": "2.1.0",
     "rabbus": "0.8.2",
