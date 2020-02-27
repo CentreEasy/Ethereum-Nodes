@@ -1,0 +1,7 @@
+.idea/
+node_modules
+
+config/config.js
+rabbit-config.js
+
+package-lock.json

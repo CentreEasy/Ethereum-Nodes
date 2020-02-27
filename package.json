@@ -1,0 +1,23 @@
+{
+  "name": "ethereum-nodes",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "0.5.3",
+    "clear-require": "3.0.0",
+    "easy-ethereum-client": "0.0.25",
+    "ethereumjs-tx": "1.3.7",
+    "lodash": "4.17.11",
+    "moment": "2.24.0",
+    "rabbot": "2.1.0",
+    "rabbus": "0.8.2",
+    "util": "0.11.1",
+    "web3": "1.0.0-beta.51"
+  },
+  "scripts": {
+    "all": "node app.js validate transactions calls",
+    "validate": "node app.js validate",
+    "transactions": "node app.js transactions",
+    "calls": "node app.js calls"
+  }
+}
