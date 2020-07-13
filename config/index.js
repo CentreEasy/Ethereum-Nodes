@@ -79,7 +79,7 @@ configuration.rabbitMQ={
 
 // Configura Rabbot
 configuration.rabbotConfig = {
-    connection: {},
+    connection: configuration.rabbit_connection,
     exchanges: [
         configuration.rabbitMQ.exchanges['transactions'],
         configuration.rabbitMQ.exchanges['transactions-pending'],

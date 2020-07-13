@@ -6,7 +6,7 @@ var Rabbot = require("rabbot");
 
 
 var Config = require('./config');
-var RabbitConfig = Config.rabbotConfig;
+var RabbotConfig = Config.rabbotConfig;
 
 /**
  * Read Params
@@ -40,11 +40,14 @@ getWeb3 = async function() {
  */
 getRabbot = async function (connection = null) {
     // Update rabbot connection user
-    if (connection && connection.hasOwnProperty("user") && connection.hasOwnProperty("pass")) {
-        RabbitConfig.connection.user = connection.user;
-        RabbitConfig.connection.pass = connection.pass;
+    if (connection) {
+        if (connection.hasOwnProperty("user")) RabbotConfig.connection.user = connection.user;
+        if (connection.hasOwnProperty("pass")) RabbotConfig.connection.pass = connection.pass;
+        if (connection.hasOwnProperty("host")) RabbotConfig.connection.host = connection.host;
+        if (connection.hasOwnProperty("port")) RabbotConfig.connection.port = connection.port;
+        if (connection.hasOwnProperty("vhost")) RabbotConfig.connection.vhost = connection.vhost;
     }
-    await Rabbot.configure(RabbitConfig);
+    await Rabbot.configure(RabbotConfig);
     return Rabbot;
 };
 

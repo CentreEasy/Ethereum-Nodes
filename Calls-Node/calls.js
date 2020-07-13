@@ -5,39 +5,6 @@ var ActionsUtility = require('../Core/ActionsUtility');
 
 module.exports = async function (Web3, Rabbot) {
 
-
-/*
-try {
-
-    var ismining = await Web3.eth.isMining();
-    var islistenning = await Web3.eth.net.isListening();
-    var perscount = await Web3.eth.net.getPeerCount();
-
-}catch (e) {
-    console.log(e);
-}
-
-    Web3.eth.isSyncing(function(error, sync){
-        if(!error) {
-            // stop all app activity
-            if(sync === true) {
-                // we use `true`, so it stops all filters, but not the web3.eth.syncing polling
-
-                Web3.setProvider(Web3.currentProvider);
-                // show sync info
-            } else if(sync) {
-                console.log(sync.currentBlock);
-
-                // re-gain app operation
-            } else {
-                // run your app init function...
-            }
-        }else{
-            var a= error
-        }
-    });
-*/
-
     async function isBlockchainSynchronized() {
         try {
             const sync = await Web3.eth.isSyncing();

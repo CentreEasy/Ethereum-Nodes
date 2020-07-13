@@ -12,6 +12,17 @@ let configuration = {
     max_number_retries: 100,
 
     /**
+     * Rabbit base connection. Can be reimplemented in each module configuration
+     */
+    rabbit_connection: {
+        user: 'guest',
+        pass: 'guest',
+        host: 'localhost',
+        port: 5672,
+        vhost: '',
+    },
+
+    /**
      * Validate Node Configuration
      */
     validate: {
