@@ -6,7 +6,13 @@ let baseConfiguration = require('./config.base');
 let dynamicConfiguration = {};
 try {
     dynamicConfiguration = require('./config');
-} catch (ignored) {}
+} catch (ignored) {
+    if (ignored.toString().includes("SyntaxError")) {
+        console.error("Syntax Error in config file.");
+        process.exit();
+    }
+    console.log("Config file not found. Using default configuration.");
+}
 
 // Merge the two configurations
 
